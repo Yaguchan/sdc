@@ -6,7 +6,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 # python run_video_easyocr2.py
 # 入力する動画ファイルのパス
-NAME = '2025-07-18 15-17-46'
+NAME = '2025-07-18 15-17-46-2'
 VIDEO_PATH = f'data/{NAME}.mp4'
 # 出力するログファイルのパス
 LOG_FILE_PATH = f'data/log_{NAME}.txt'
@@ -23,12 +23,12 @@ POSITIONS = [
 RECT_COLOR = (252, 15, 192) # (B, G, R) - ピンク色
 RECT_THICKNESS = 3 # 枠線の太さ
 # テキスト描画設定
-FONT_PATH = '../font/Noto_Sans_JP/static/NotoSansJP-Regular.ttf'
+FONT_PATH = '../font/Noto_Sans_JP/static/NotoSansJP-ExtraBold.ttf'
 FONT_SIZE = 32
 TEXT_COLOR = (255, 15, 192) # 白色
 # テキストボックス設定
 BOX_COLOR = (255, 255, 255, 255) # (R, G, B, Alpha) - 半透明の黒(128)
-BOX_PADDING = 5 # テキストと背景ボックスの間の余白
+BOX_PADDING = 3 # テキストと背景ボックスの間の余白
 
 
 def result_to_ctext(results):
@@ -69,16 +69,16 @@ def draw_text_on_frame(frame, text, font_path, font_size, text_color, box_color,
     margin = 15
     
     # 背景ボックスの座標を計算
-    box_right = frame_width - margin
-    box_bottom = frame_height - margin
-    box_left = box_right - text_width - (box_padding * 2)
-    box_top = box_bottom - text_height - (box_padding * 2)
+    box_right = frame_width - margin + box_padding
+    box_bottom = frame_height - margin + 2 * box_padding
+    box_left = box_right - text_width - box_padding
+    box_top = box_bottom - text_height
     
     # 背景ボックスを描画
     draw.rectangle([(box_left, box_top), (box_right, box_bottom)], fill=box_color)
     
     # テキストを描画 (PillowはRGBAで色を指定)
-    text_position = (box_left + box_padding, box_top + box_padding)
+    text_position = (box_left - box_padding, box_top - box_padding)
     # text_color(BGR)をRGBAに変換して描画
     draw.text(text_position, text, font=font, fill=text_color[::-1] + (255,))
 
@@ -155,15 +155,15 @@ def main():
                     print(log_data_line)
                     last_log_data = log_data_line # 描画用テキストを更新
                 
-                # --- 座標の枠線を描画 ---
-                for p in POSITIONS:
-                    left, upper, right, lower = p
-                    cv2.rectangle(frame, (left, upper), (right, lower), RECT_COLOR, RECT_THICKNESS)
+                    # --- 座標の枠線を描画 ---
+                    for p in POSITIONS:
+                        left, upper, right, lower = p
+                        cv2.rectangle(frame, (left, upper), (right, lower), RECT_COLOR, RECT_THICKNESS)
 
-                # --- フレームへの描画と書き出し ---
-                output_frame = frame
-                if last_log_data: # 描画するテキストがあれば描画
-                    output_frame = draw_text_on_frame(frame, last_log_data, FONT_PATH, FONT_SIZE, TEXT_COLOR, BOX_COLOR, BOX_PADDING)
+                    # --- フレームへの描画と書き出し ---
+                    output_frame = frame
+                    if last_log_data: # 描画するテキストがあれば描画
+                        output_frame = draw_text_on_frame(frame, last_log_data, FONT_PATH, FONT_SIZE, TEXT_COLOR, BOX_COLOR, BOX_PADDING)
 
                 # 処理したフレームを動画ファイルに書き込む
                 out.write(output_frame)
