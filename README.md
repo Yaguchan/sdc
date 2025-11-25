@@ -18,14 +18,19 @@ FPU運用で得られたデータを自動で記録する。（[デモ映像](ht
 ### run_video_easyocr.py
 FPU端末の動画を収録し、OCRで画像認識を行うことで、架台における電界を取得する。
 ```
-log_fpu/sample/run_video_easyocr.py
+python log_fpu/sample/run_video_easyocr.py
 ```
 ### run_video_easyocr2.py
 元動画に画像認識部分・認識結果を反映させた動画を出力する。  
 ※日本語(架台名)を出力するには、`FONT_PATH`を指定する必要がある
 ```
-log_fpu/sample/run_video_easyocr2.py
+python log_fpu/sample/run_video_easyocr2.py
 ```
+
+## alarm_moni
+マトリクス出力の一本(HD-AUX)をPCに取り込み、PC上で黒を認識したら時間と音が鳴るようなものを作ってみました。  
+(HD-AUX→TD卓TRKのSDIを、ブラマジの変換器を使い、USB typeC でPCに取り込みました。  
+取り込んだ信号をpythonのOpenCVを使用して、ストリーミング処理でアラーム条件を確認しています。)
 
 ## vhf_asr
 VHF(無線)の音声を取得し、音声認識を行う。  
