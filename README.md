@@ -31,6 +31,10 @@ python log_fpu/sample/run_video_easyocr2.py
 マトリクス出力の一本(HD-AUX)をPCに取り込み、PC上で黒を認識したら時間と音が鳴るような試作品です。  
 (HD-AUX→TD卓TRKのSDIを、ブラマジの変換器を使い、USB typeC でPCに取り込む。  
 取り込んだ信号をpythonのOpenCVを使用して、ストリーミング処理でアラーム条件を確認)
+### 黒み検知
+```
+python alarm_moni/sample/test1.py
+```
 
 ## vhf_asr
 VHF(無線)の音声を取得し、音声認識を行う。  
