@@ -28,9 +28,9 @@ python log_fpu/sample/run_video_easyocr2.py
 ```
 
 ## alarm_moni
-マトリクス出力の一本(HD-AUX)をPCに取り込み、PC上で黒を認識したら時間と音が鳴るような試作品です。 
+マトリクス出力の一本(HD-AUX)をPCに取り込み、PC上で黒を認識したら時間と音が鳴るような試作品です。  
 (HD-AUX→TD卓TRKのSDIを、ブラマジの変換器を使い、USB typeC でPCに取り込む。  
-取り込んだ信号をpythonのOpenCVを使用して、ストリーミング処理でアラーム条件を確認)
+取り込んだ信号をpythonのOpenCVを使用して、ストリーミング処理でアラーム条件を確認)  
 ちなみに、[音読さん](https://ondoku3.com/ja/)でアラーム音(wav)生成を行なっています。
 ### 黒み検知
 ```
