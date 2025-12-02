@@ -33,7 +33,7 @@ python log_fpu/sample/run_video_easyocr2.py
 取り込んだ信号をpythonのOpenCVを使用して、ストリーミング処理でアラーム条件を確認)  
 ちなみに、[音読さん](https://ondoku3.com/ja/)でアラーム音(wav)生成を行なっています。  
 ![Image](https://github.com/user-attachments/assets/d36f1daa-2d56-4eec-8c3e-4f0e3feaf83e)
-### 黒み検知
+### 黒み/フリーズ検知
 ```
 python alarm_moni/sample/test1.py
 ```
