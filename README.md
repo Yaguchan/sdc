@@ -30,10 +30,10 @@ python log_fpu/sample/run_video_easyocr2.py
 ## alarm_moni
 MTX出力の1本(HD-AUX)をPCに取り込み、黒を認識したらアラーム音を鳴らす試作品です。（[デモ映像](https://drive.google.com/file/d/1KKdxOOdOs7ReH4y6OafO6wANqJtSF8jW/view?usp=sharing)）  
 (HD-AUX→TD卓TRKのSDIを、ブラマジの変換器を使い、USB typeC でPCに取り込む。  
-取り込んだ信号をpythonのOpenCVを使用して、ストリーミング処理でアラーム条件を確認)  
-ちなみに、[音読さん](https://ondoku3.com/ja/)でアラーム音(wav)生成を行なっています。  
+取り込んだ信号をpythonのOpenCVを使用して、ストリーミング処理でアラーム条件を確認)   
 ![Image](https://github.com/user-attachments/assets/d36f1daa-2d56-4eec-8c3e-4f0e3feaf83e)
 ### 黒/フリーズ検知
+[音読さん](https://ondoku3.com/ja/)でアラーム音(wav)生成を行なっています。 
 ```
 python alarm_moni/sample/test1.py
 ```
