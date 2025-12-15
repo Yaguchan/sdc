@@ -32,7 +32,7 @@ MTX出力の1本(HD-AUX)をPCに取り込み、黒を認識したらアラーム
 (HD-AUX→TD卓TRKのSDIを、ブラマジの変換器を使い、USB typeC でPCに取り込む。  
 取り込んだ信号をpythonのOpenCVを使用して、ストリーミング処理でアラーム条件を確認)   
 ![Image](https://github.com/user-attachments/assets/d36f1daa-2d56-4eec-8c3e-4f0e3feaf83e)
-### 黒/フリーズ検知
+### black/freeze検知
 [音読さん](https://ondoku3.com/ja/)でアラーム音(wav)生成を行なっています。 
 ```
 python alarm_moni/sample/test1.py
