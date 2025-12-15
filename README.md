@@ -37,7 +37,7 @@ MTX出力の1本(HD-AUX)をPCに取り込み、黒を認識したらアラーム
 ```
 python alarm_moni/sample/test1.py
 ```
-![Image](https://github.com/user-attachments/assets/b42194e2-6be5-4fa7-bb1c-d10aa7d1fd2d)
+![Image](https://github.com/user-attachments/assets/5706e53f-880a-4536-88af-d57291d2908a)
 
 ## vhf_asr
 VHF(無線)の音声を取得し、音声認識を行う。  
