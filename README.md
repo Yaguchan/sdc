@@ -13,7 +13,7 @@ dengonban/ExportPublicFolderEmails.bas
 ```
 
 ## log_fpu
-FPU運用で得られたデータを自動で記録する。（[デモ映像](https://drive.google.com/file/d/1p79cPBcLg5ipJp6whAltpFlXx_I5oAG-/view?usp=sharing)）
+FPU運用で得られたデータを自動で記録する。（[デモ映像](https://drive.google.com/file/d/1p79cPBcLg5ipJp6whAltpFlXx_I5oAG-/view?usp=sharing)、[フリーズ映像](https://drive.google.com/file/d/1wg8p86krn77xX8vLBNfGXhz9O0hK1i9i/view?usp=sharing)）
 ![Image](https://github.com/user-attachments/assets/49ebee40-ce7f-4229-971b-8010d50668ff)
 ### run_video_easyocr.py
 FPU端末の動画を収録し、OCRで画像認識を行うことで、架台における電界を取得する。
