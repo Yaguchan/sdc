@@ -11,6 +11,10 @@ Outlookのメール**技術統括局・回線ｾﾝﾀｰ伝言板**をNotebookL
 ```
 dengonban/ExportPublicFolderEmails.bas
 ```
+※ VBAファイルの位置（）
+```
+C:\Users\[ID]\AppData\Roaming\Microsoft\Outlook
+```
 
 ## log_fpu
 FPU運用で得られたデータを自動で記録する。（[デモ映像](https://drive.google.com/file/d/1p79cPBcLg5ipJp6whAltpFlXx_I5oAG-/view?usp=sharing)）

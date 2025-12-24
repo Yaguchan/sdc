@@ -16,8 +16,8 @@ Sub ExportPublicFolderEmails()
     basePath = "C:\Users\yaguchi.yk110\OneDrive - 日本テレビ放送網株式会社\デスクトップ\回線運用部\data\mail\"
 
     ' 開始・終了年月をコード内で指定（例：2025年7月～9月）
-    startKey = "201901"
-    endKey = "201912"
+    startKey = "202507"
+    endKey = "202509"
 
     ' 日付に変換
     startDate = DateSerial(Left(startKey, 4), Right(startKey, 2), 1)
