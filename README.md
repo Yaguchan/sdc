@@ -11,7 +11,7 @@ Outlookのメール**技術統括局・回線ｾﾝﾀｰ伝言板**をNotebookL
 ```
 dengonban/ExportPublicFolderEmails.bas
 ```
-※ VBAファイルの位置（）
+※ VBAファイルの位置（エラーが出る場合はVBAファイルを削除してください）
 ```
 C:\Users\[ID]\AppData\Roaming\Microsoft\Outlook
 ```
